@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char ch[100];
+    int i, sum=0, sum1=0;
+    printf("Line of text: ");
+    scanf("%s",ch);
+    for(i=0;i<strlen(ch);i++)
+    {
+        switch(ch[i])
+        {
+        case 'a':
+        case 'e':
+        case 'i':
+        case 'u':
+        case 'o':
+        sum +=1;
+        }
+    }
+    sum1=strlen(ch)-sum;
+    printf("\nNumber of vowels: %d",sum);
+    printf("\nNumber of consonants: %d",sum1);
+    return 0;
+}
