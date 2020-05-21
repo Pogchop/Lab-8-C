@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main()
+{
+ 
+   int i, j, num;
+   int num1[20], num2[15], temp[20];
+   
+   printf("Please enter how many numbers to be sorted in alphabetical order: ");
+   scanf("%d", &num);
+   
+   for(i=0; i< num ; i++)
+   {
+      printf("Please enter number %d : ",i+1);
+      scanf("%d",&num1[i]);
+   }
+   for(i=0;i<num;i++)
+   {
+       num2[i]=num1[i];
+   }
+   for(i=0; i < num-1 ; i++)
+   {
+      for(j=i+1; j< num; j++)
+      {
+         if(num1[i]<num1[j])
+         {
+             temp[i]=num1[i];
+             num1[i]=num1[j];
+             num1[j]=temp[i];
+         }
+      }
+   }
+   printf("Names before sorting in alphabetical order\n");
+ 
+   for(i=0; i< num ; i++)
+   {
+      printf("%d\n",num2[i]);
+   } 
+   
+   printf("Names after sorting in alphabetical order\n");
+   
+   for(i=0; i< num ; i++)
+   {
+      printf("%d\n",num1[i]);
+   }
+}
