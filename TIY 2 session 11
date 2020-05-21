@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+    char ch[50];
+    int i, sum=0;
+    printf("line of text: ");
+    scanf("%s",ch);
+    for (i=0;i<strlen(ch);i++)
+    {
+        switch(ch[i])
+        {
+            case 'u':
+            case 'e':
+            case 'o':
+            case 'a':
+            case 'i':
+            sum +=1;
+        }
+    }
+    printf("there are %d vowels",sum);
+
+    return 0;
+}
